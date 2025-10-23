@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
+    'ninja'
 ]
 
 MIDDLEWARE = [
@@ -78,6 +80,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+SECRET_KEY = 's3cr3tK3y!@#1234567890RandomLongString'
+JWT_SECRET = SECRET_KEY  # Use same or different secret
+JWT_ALGORITHM = 'HS256'
+JWT_EXPIRATION_DELTA = 3600  # 1 hour in seconds
 
 
 # Password validation
