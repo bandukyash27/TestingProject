@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from app.api import router as router_1
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/',router_1.urls)
 ]
